@@ -7,7 +7,7 @@ public class Imaging {
 
   // Color Filter Variables:
   private static int red = 255, green = 121, blue = 0;
-  private static String detectorName = "orange";
+  private static String detectorName = "parachute";
   
   // Constructor:
   public Imaging() {
@@ -27,8 +27,7 @@ public class Imaging {
   // Get RGB Method:
   public static int[] getRGB() throws Exception {
     // Returns the RGB:
-    int rgb[] = {red, green, blue};
-    return rgb;
+    return new int[]{red, green, blue};
   }
 
   // Set RGB Method:
