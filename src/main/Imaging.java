@@ -34,7 +34,7 @@ public class Imaging {
   /* DETECTION METHODS */
 
   // Detect Blobs Methods:
-  public static boolean isParachuteInFrame(BufferedImage image) throws Exception {
+  public static boolean isDetectionInFrame(BufferedImage image) throws Exception {
     // Gets the Detection:
     BufferedImage resizedImage = Analyze.resizeBufferedImageRatio(image, resize);
     int rgb[][]  = Analyze.findSelectedBufferedRGB(resizedImage, 0, 0, resizedImage.getWidth(), resizedImage.getHeight());
