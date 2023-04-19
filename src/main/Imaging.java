@@ -3,12 +3,13 @@ package main;
 import lib.Analyze;
 import java.awt.image.BufferedImage;
 
+@SuppressWarnings("unused")
 public class Imaging {
   /* IMAGING VARIABLES */
 
   // Color Filter Variables:
   private static int red = 255, green = 121, blue = 0;
-  private static double resize = 0.25, detection = 0.3;
+  private static double resize = 0.25, detection = 0.33;
   private static String detectorName = "parachute";
   
   // Constructor:

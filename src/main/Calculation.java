@@ -3,6 +3,7 @@ package main;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
+@SuppressWarnings("unused")
 public class Calculation extends Imaging {
   // Constructor:
   public Calculation(int r, int g, int b, double resizeRatio, double detectionRatio) {
@@ -10,10 +11,10 @@ public class Calculation extends Imaging {
   }
 
   // Calculate Distance to Detection:
-  public static double distanceToDetection(String path, double frameCoverage) throws Exception {
+  public static double distanceToDetection(String path, double altitude, double focalLength, double sensorSize) throws Exception {
     // Loops through Directory:
     File directory = new File(path);
-    double frameNumber = 0;
+    double detectionFrame = 0, frameNumber = 0;
     loop: for (File file : directory.listFiles()) {
       // Checks the Case:
       if (file.isFile()) {
@@ -25,6 +26,7 @@ public class Calculation extends Imaging {
         // Checks the Case:
         if (isDetectionInFrame(image)) {
           // Breaks:
+          detectionFrame = frameNumber;
           break loop;
         }
 
@@ -34,7 +36,13 @@ public class Calculation extends Imaging {
     }
 
     // Returns the Value:
-    return (frameNumber * frameCoverage);
+    double frameCoverage = getFrameCoverage(altitude, focalLength, sensorSize);
+    return (detectionFrame * frameCoverage);
+  }
+
+  // Gets the Frame Coverage:
+  private static double getFrameCoverage(double altitude, double focalLength, double sensorSize) throws Exception {
+    return (sensorSize * altitude) / focalLength;
   }
 
   // Gets the File Name:
