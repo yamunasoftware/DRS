@@ -16,7 +16,7 @@
     <dependency>
 	    <groupId>com.github.yamunasoftware</groupId>
 	    <artifactId>JVision</artifactId>
-	    <version>main-SNAPSHOT</version>
+	    <version>main-db5882b446-1</version>
 	  </dependency>
   </dependencies>
 </project>
