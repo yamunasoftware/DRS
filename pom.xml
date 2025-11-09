@@ -23,7 +23,7 @@
     <dependency>
 	    <groupId>com.github.yamunasoftware</groupId>
 	    <artifactId>JVision</artifactId>
-	    <version>ea0cb87b49</version>
+	    <version>1.0.0</version>
 	  </dependency>
   </dependencies>
 </project>
