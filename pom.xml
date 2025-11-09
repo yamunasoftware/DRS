@@ -1,22 +1,29 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
   
-  <groupId>org.yamunasoftware.drs</groupId>
-  <artifactId>DRS</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+    <groupId>org.yamunasoftware.drs</groupId>
+    <artifactId>DRS</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
   
   <repositories>
-		<repository>
-		  <id>jitpack.io</id>
+      <repository>
+          <id>jitpack.io</id>
 		  <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+      </repository>
+  </repositories>
 
   <dependencies>
     <dependency>
 	    <groupId>com.github.yamunasoftware</groupId>
 	    <artifactId>JVision</artifactId>
-	    <version>main-db5882b446-1</version>
+	    <version>ea0cb87b49</version>
 	  </dependency>
   </dependencies>
 </project>
